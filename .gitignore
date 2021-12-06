@@ -1,0 +1,5 @@
+# Visual Studio Code directory
+.vscode/
+
+# Builds
+*.exe
