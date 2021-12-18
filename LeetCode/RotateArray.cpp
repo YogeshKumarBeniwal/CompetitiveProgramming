@@ -20,20 +20,20 @@ int GetMinSteps(int steps, int size)
     return round(f * size);
 }
 
-vector<int> rotate(vector<int> &nums, int k)
+void rotate(vector<int> &nums, int k)
 {
     int size = nums.size();
 
     if (size == 1 || k == 0)
     {
-        return nums;
+        return;
     }
 
     int minSteps = k > size ? GetMinSteps(k, size) : k;
 
     if (minSteps == size)
     {
-        return nums;
+        return;
     }
 
     int temp = nums[0], ni;
@@ -62,17 +62,16 @@ vector<int> rotate(vector<int> &nums, int k)
             }
         }
     }
-    return nums;
 }
 
 int main()
 {
     vector<int> nums{1,2,3,4,5,6};
-    vector<int> sqs = rotate(nums, 1);
+    rotate(nums, 1);
 
-    for (int i = 0; i < sqs.size(); i++)
+    for (int i = 0; i < nums.size(); i++)
     {
-        cout << sqs[i] << endl;
+        cout << nums[i] << endl;
     }
 
     return 0;
