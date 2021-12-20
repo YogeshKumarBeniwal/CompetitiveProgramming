@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void swape(int &x, int &y)
+void swap(int &x, int &y)
 {
     x = x + y;
     y = x - y;
